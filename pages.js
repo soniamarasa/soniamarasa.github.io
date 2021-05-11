@@ -1,14 +1,17 @@
+const theme = document.querySelector('.themeSelect');
+const body = document.querySelector('body');
 const header = document.querySelector('#header');
 const buttonMenu = document.querySelector('.dropdown-trigger');
 const dropdownMenu = document.querySelector('#menudropdown');
-const theme = document.querySelector('.themeSelect');
-const body = document.querySelector('body');
 const ano = document.querySelector('#ano');
-const ageSpan = document.querySelector('#age');
+const ageSpan = document.querySelector('.age');
+const aboutme = document.querySelector('#aboutme-menu');
 let menuIsOpened = false;
+
 
 if (localStorage.getItem('currentTheme')) {
   body.className = localStorage.getItem('currentTheme');
+  console.log(body.className);
 } else {
   localStorage.setItem('currentTheme', 'light');
   body.className = localStorage.getItem('currentTheme');
@@ -25,7 +28,7 @@ function icon() {
 }
 
 header.addEventListener('click', () => {
-  window.location.href = '/home.html';
+  window.location.href = '/home';
   console.log('oi');
 });
 
@@ -40,34 +43,43 @@ window.addEventListener('load', () => {
     icon();
   });
 
+  // buttonMenu.addEventListener('click', () => {
+  //   const dropdownContent = document.createElement('ul');
+  //   dropdownContent.className = 'dropdown-links';
+
+  //   if (!menuIsOpened) {
+  //     dropdownContent.innerHTML =
+  //       '<li><a href="/home.html" aria-selected="true">INÍCIO</a></li>' +
+  //       '<li><a href="/information.html">INFORMAÇÕES</a></li>' +
+  //       '<li><a href="/contact.html">CONTATO</a></li>' +
+  //       '<li><a href="/achievements.html">CONQUISTAS</a></li>' +
+  //       '<li><a href="/projects.html">PROJETOS</a></li>';
+  //     (' <li><a href="/aboutme.html">SOBRE MIM</a></li>');
+  //     dropdownMenu.appendChild(dropdownContent);
+  //     menuIsOpened = true;
+  //   } else {
+  //     const elementrem = document.querySelector('.dropdown-links');
+  //     dropdownMenu.className = 'menuhide';
+  //     dropdownMenu.removeChild(elementrem);
+  //     menuIsOpened = false;
+  //   }
+  // });
+
   buttonMenu.addEventListener('click', () => {
-    const dropdownContent = document.createElement('ul');
-    dropdownContent.className = 'dropdown-links';
-    if (!menuIsOpened) {
-      dropdownContent.innerHTML =
-        '<li><a href="/home.html" aria-selected="true">INÍCIO</a></li>' +
-        '<li><a href="/information.html">INFORMAÇÕES</a></li>' +
-        '<li><a href="/contact.html">CONTATO</a></li>' +
-        '<li><a href="/achievements.html">CONQUISTAS</a></li>' +
-        '<li><a href="/projects.html">PROJETOS</a></li>'
-       ' <li><a href="/aboutme.html">SOBRE MIM</a></li>';
-      dropdownMenu.appendChild(dropdownContent);
-      menuIsOpened = true;
-    } else {
-      const elementrem = document.querySelector('.dropdown-links');
-      dropdownMenu.removeChild(elementrem);
-      menuIsOpened = false;
-    }
+    $('#menudropdown').slideToggle(500);
   });
 
-  let birth = new Date(1994, 07, 18);
   let data = new Date();
-  let year = data.getFullYear();
+  const birth = new Date(1994, 07, 18);
+  const year = data.getFullYear();
+
   ano.textContent = year;
 
-  let dif = data.getTime() - birth.getTime();
-  let age = Math.trunc(dif / 31556900000);
+  const dif = data.getTime() - birth.getTime();
+  const age = Math.trunc(dif / 31556900000);
 
+  aboutme.textContent =
+    'Sou formada em engenharia civil e atualmente estudo programação web. Decidi me especializar em uma nova área por interesse e busca de conhecimento, contribuindo cada vez mais para o meu desenvolvimento profissional.';
   if (!!ageSpan) {
     ageSpan.textContent = age;
   }
