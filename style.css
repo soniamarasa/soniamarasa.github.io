@@ -3,32 +3,43 @@
   margin: 0;
 }
 
-html,
-body {
-  height: 100vh;
+a:link {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
 }
+
+a:visited {
+  color: white;
+}
+
 
 body {
   background-size: cover;
   background-attachment: fixed;
   font-family: Abel;
   color: white;
+  height: 100%;
 }
 
 .principal {
+  padding-top: 5vh;
   background-color: rgba(0, 0, 0, 0.5);
+  background-size: cover;
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
   height: 100vh;
-  height: max-content;
 }
 
-#container {
+.container {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  margin-top: 20px;
+  height: 100%;
+}
+
+.contatos {
+ 
 }
 
 #foto {
@@ -39,6 +50,11 @@ body {
   background-size: cover;
   border-radius: 50%;
   border: 3px solid white;
+}
+
+
+#foto:hover {
+  opacity: 0.9;
 }
 
 #name {
@@ -62,23 +78,34 @@ body {
   padding-right: 5px;
 }
 
-a:link {
-  color: white;
-  text-transform: uppercase;
-  text-decoration: none;
+.contato div:hover {
+  background-color: rgba(255, 255, 255, 0.349);
+  color: black !important;
 }
 
-a:visited {
-  color: white;
+.contato div a:hover {
+  color: black !important;
+  font-weight: bold;
 }
 
-span {
+footer {
+  text-align: center;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 0.555);
+  position: relative;
+  bottom: 0;
+}
+
+
+
+#nome {
   font-family: Pacifico;
   font-size: 4em;
   text-align: center;
 }
 
-span ~ p {
+#nome ~ p {
   color: rgb(192, 192, 192);
   font-family: Abel;
   font-size: 1.8em;
@@ -114,22 +141,12 @@ span ~ p {
   background-image: url('./img/perfil/3.jpg');
 }
 
-footer {
-  text-align: center;
-  padding: 5px;
-  background-color: rgba(0, 0, 0, 0.9);
-  color: rgba(255, 255, 255, 0.555);
-
-  bottom: 0;
-  width: 100vw;
-}
-
 @media (max-width: 600px) {
-  span {
+  #nome {
     font-size: 2.8em;
   }
 
-  span ~ p {
+  #nome ~ p {
     font-size: 1.5em;
   }
 
@@ -138,21 +155,30 @@ footer {
     justify-content: center;
     flex-direction: column;
   }
-}
 
-@media (max-width: 350px) {
-  span {
-    font-size: 2em;
+  .container {
+    height: max-content;
+    padding-bottom: 10px;
   }
 
-  span ~ p {
-    font-size: 0.8em;
+  .principal {
+    height: 100%;
+  }
+}
+
+@media (max-width: 370px) {
+  #nome {
+    font-size: 2.2em;
+  }
+
+  #nome ~ p {
+    font-size: 1em;
   }
 
   #foto {
-    width: 150px;
-    height: 150px;
-    min-height: 150px;
+    width: 180px;
+    height: 180px;
+    min-height: 180px;
   }
 
   .row {
@@ -160,4 +186,10 @@ footer {
     justify-content: center;
     flex-direction: column;
   }
+
+ 
+}
+
+#rodape {
+  font-size: 0.8em;
 }

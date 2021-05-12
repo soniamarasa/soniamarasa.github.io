@@ -4,7 +4,6 @@ body {
   min-width: 350px;
 }
 
-
 h4,
 h5,
 h6,
@@ -27,8 +26,9 @@ h4 {
 h2 {
   font-family: 'Quicksand', sans-serif;
   font-weight: 900 !important;
+  color: black;
+  text-shadow: 1px 1px 5px #0c0c0c !important;
 }
-
 
 header {
   height: 50%;
@@ -45,6 +45,10 @@ nav {
   cursor: pointer;
   position: absolute;
   right: 5%;
+}
+
+.navegacao-menu {
+  align-items: center;
 }
 
 #header {
@@ -131,7 +135,7 @@ footer {
 
 .light {
   background-color: rgb(255, 255, 255);
-  font-weight: 600 !important;
+  font-weight: bold !important;
   color: #575757;
 }
 
@@ -156,8 +160,13 @@ footer {
   color: black;
 }
 
-.light h6 {
-  text-shadow: 1px 1px 1px #999999 !important;
+.light h2:hover {
+  color: rgb(70, 155, 127);
+}
+
+.light h6,
+.light h4 {
+  text-shadow: 1px 1px 1px #808080 !important;
 }
 
 .light footer {
@@ -166,6 +175,7 @@ footer {
 
 .light a {
   color: black;
+  font-weight: bolder;
 }
 
 .light a:hover {
@@ -177,7 +187,7 @@ footer {
 }
 
 .light b {
-  font-weight: 900 !important;
+  font-weight: bolder !important;
   color: black;
 }
 
@@ -189,6 +199,23 @@ footer {
 
 .light header {
   background-image: url('img/pages/h6.jpg');
+}
+
+.light .active {
+  color: rgb(70, 155, 127) !important;
+  text-shadow: 1px 1px 1px #999999 !important;
+}
+
+.light .social {
+  background-color: rgb(70, 155, 127);
+}
+
+.light .social i {
+  color: white;
+}
+
+.light .social:hover {
+  background-color: rgb(45, 110, 89);
 }
 
 /* DARK */
@@ -223,7 +250,12 @@ footer {
   color: rgb(255, 255, 255);
 }
 
-.dark h6 {
+.dark h2:hover {
+  color: rgb(207, 123, 84);
+}
+
+.dark h6,
+.dark h4 {
   text-shadow: 1px 1px 1px #000000 !important;
 }
 
@@ -249,6 +281,29 @@ footer {
   color: rgb(243, 171, 138);
 }
 
+.dark header {
+  background-color: rgb(110, 110, 110);
+}
+
+.dark .social {
+  background-color: rgb(243, 171, 138);
+}
+
+.dark .social i {
+  color: #2f2f2f;
+}
+
+.dark .social:hover {
+  background-color: rgb(207, 123, 84);
+}
+
+.dark .active {
+  color: rgb(207, 123, 84) !important;
+  text-shadow: 1px 1px 1px #000000 !important;
+}
+
+/* RESPONSIVIDADE */
+
 @media (max-width: 600px) {
   .navegacao-links {
     display: none;
@@ -273,7 +328,7 @@ footer {
   }
 
   .themeSelect {
-    right: 5%;
+    right: 4%;
   }
 
   #menudropdown {
@@ -299,9 +354,9 @@ footer {
     display: flex;
     justify-content: space-around;
   }
-  .navegacao-links li a {
+  /* .navegacao-links li a {
     padding: 0 2px;
-  }
+  } */
 
   .themeSelect {
     right: 1%;
@@ -322,9 +377,9 @@ footer {
   .container {
     width: 80%;
   }
-  .navegacao-links li a {
+  /* .navegacao-links li a {
     padding: 2px 10px !important;
-  }
+  } */
 }
 
 @media (min-width: 1900px) {
@@ -369,31 +424,7 @@ footer {
   text-align: center;
 }
 
-.light .social {
-  background-color: rgb(70, 155, 127);
-}
-
-.light .social i {
-  color: white;
-}
-
-.dark .social {
-  background-color: rgb(243, 171, 138);
-}
-
-.dark .social i {
-  color: #2f2f2f;
-}
-
-.light .social:hover {
-  background-color: rgb(45, 110, 89);
-}
-
-.dark .social:hover {
-  background-color: rgb(207, 123, 84);
-}
-
-section img {
+#achievements section img {
   width: 100%;
   margin-bottom: 25px;
   border-radius: 10px !important;
@@ -404,6 +435,10 @@ section img {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#achievements h6 {
+  align-self: flex-start;
 }
 
 #contact {
@@ -424,6 +459,20 @@ section a {
   margin-right: 10px;
 }
 
+#contact p i {
+  padding-right: 0.5em;
+  opacity: 0.5;
+  text-align: center;
+}
+
+.dark #contact p i {
+  text-shadow: 1px 1px 1px #000000 !important;
+}
+
+.light #contact p i {
+  text-shadow: 1px 1px 1px #6d6d6d !important;
+}
+
 .social-cont {
   display: flex;
   flex-direction: row;
@@ -441,3 +490,53 @@ section a {
   padding-bottom: 0px;
 }
 
+#projects img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0 !important;
+
+  border-radius: none !important;
+}
+
+#projects h6 {
+  color: inherit;
+}
+
+#projects article {
+  margin-bottom: 3.5em;
+}
+
+.indicators {
+  background-color: #0000006b;
+}
+
+.links-proj {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1em;
+}
+
+.links-proj i {
+  padding-right: 5px;
+}
+
+.jsp,
+.jsp i {
+  color: #efd81d !important;
+}
+
+.angular,
+.angular i {
+  color: #d6002f !important;
+}
+
+.react,
+.react i {
+  color: #00d1f7 !important;
+}
+
+.vue,
+.vue i {
+  color: #3cb27d !important;
+}
