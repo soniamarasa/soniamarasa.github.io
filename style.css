@@ -62,11 +62,12 @@ footer {
   background-size: cover;
   border-radius: 50%;
   border: 3px solid white;
+  cursor: pointer;
 }
 
 #foto:hover {
   opacity: 0.8;
-  cursor: pointer;
+  
 }
 
 #name {
