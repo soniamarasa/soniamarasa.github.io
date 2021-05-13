@@ -13,33 +13,45 @@ a:visited {
   color: white;
 }
 
+html,
+body {
+  height: 100% !important;
+}
 
 body {
   background-size: cover;
   background-attachment: fixed;
   font-family: Abel;
   color: white;
-  height: 100%;
 }
 
 .principal {
-  padding-top: 5vh;
   background-color: rgba(0, 0, 0, 0.5);
-  background-size: cover;
-  background-attachment: fixed;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: fit-content;
+  min-height: calc(100% - 2.5em);
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  height: 100%;
+
+  width: 100%;
+  padding-top: 5vh;
 }
 
 .contatos {
- 
+  margin-bottom: 5vh !important;
+}
+
+footer {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  height: 2.5em;
 }
 
 #foto {
@@ -52,9 +64,8 @@ body {
   border: 3px solid white;
 }
 
-
 #foto:hover {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 #name {
@@ -88,17 +99,6 @@ body {
   font-weight: bold;
 }
 
-footer {
-  text-align: center;
-  padding: 5px;
-  background-color: rgba(0, 0, 0, 0.9);
-  color: rgba(255, 255, 255, 0.555);
-  position: relative;
-  bottom: 0;
-}
-
-
-
 #nome {
   font-family: Pacifico;
   font-size: 4em;
@@ -108,9 +108,10 @@ footer {
 #nome ~ p {
   color: rgb(192, 192, 192);
   font-family: Abel;
-  font-size: 1.8em;
+  font-size: 1.3em;
   text-align: center;
 }
+
 
 #night {
   background-image: url('./img/background/11.jpg');
@@ -129,9 +130,9 @@ footer {
   background-image: url('./img/perfil/2.jpg');
 }
 
-#afternoon .principal {
+ #afternoon .principal {
   background-color: rgba(0, 0, 0, 0.7);
-}
+} 
 
 #morning {
   background-image: url('./img/background/3-1.jpg');
@@ -156,14 +157,14 @@ footer {
     flex-direction: column;
   }
 
-  .container {
+  /* .container {
     height: max-content;
     padding-bottom: 10px;
-  }
+  } */
 
-  .principal {
+  /* .principal {
     height: 100%;
-  }
+  } */
 }
 
 @media (max-width: 370px) {
@@ -186,8 +187,6 @@ footer {
     justify-content: center;
     flex-direction: column;
   }
-
- 
 }
 
 #rodape {
