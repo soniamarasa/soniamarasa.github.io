@@ -66,6 +66,7 @@ footer {
 
 #foto:hover {
   opacity: 0.8;
+  cursor: pointer;
 }
 
 #name {
@@ -131,7 +132,7 @@ footer {
 }
 
  #afternoon .principal {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.6);
 } 
 
 #morning {
