@@ -5,7 +5,7 @@ let rodape = null;
 window.addEventListener('load', () => {
 photo = document.querySelector('#foto');
 photo.addEventListener('click', () => {
-    console.log("oi");
+  window.location.href = '';
 })
 
   changeBackground();
@@ -15,9 +15,6 @@ function changeBackground() {
   let date = new Date();
   let hours = date.getHours();
   
-  let x = 10;
-
-  console.log(hours);
 
   bodyBack = document.querySelector('body');
   rodape = document.querySelector('#rodape');
