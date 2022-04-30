@@ -86,7 +86,7 @@ footer {
   font-size: 20px;
   display: flex;
   flex-direction: row;
-  width: 11em;
+  width: 8em;
   justify-content: center;
   background-color: rgba(32, 28, 56, 0.7);
 }
@@ -115,7 +115,7 @@ footer {
 #nome ~ p {
   color: #e3dbf1;
   font-family: Abel;
-  font-size: 1.3em;
+  font-size: 1.2em;
   text-align: center;
   text-shadow: #19132f 0.1em 0.1em 0.2em;
 }
