@@ -27,6 +27,7 @@ body {
   background-attachment: fixed;
   font-family: Abel;
   color: #d09bb5;
+  background-color: #6a657c;
 }
 
 .principal {
@@ -36,8 +37,6 @@ body {
   height: fit-content;
   min-height: calc(100% - 2.5em);
 }
-
-
 
 .container {
   display: flex;
@@ -72,7 +71,6 @@ footer {
 
 #foto:hover {
   opacity: 0.8;
-  
 }
 
 #name {
@@ -81,7 +79,7 @@ footer {
 }
 
 .contato div {
-  border: 2px solid rgb(208,155,181);
+  border: 2px solid rgb(208, 155, 181);
   border-radius: 10px;
   padding: 8px;
   margin-top: 12px;
@@ -90,7 +88,7 @@ footer {
   flex-direction: row;
   width: 11em;
   justify-content: center;
-  background-color: rgba(32, 28,  56, 0.7);
+  background-color: rgba(32, 28, 56, 0.7);
 }
 
 .contato div i {
@@ -98,11 +96,11 @@ footer {
 }
 
 .contato div:hover {
-  background-color: rgba(208,155,181, 0.349);
+  background-color: rgba(208, 155, 181, 0.349);
   color: white !important;
 }
 
-.contato div:hover  a{
+.contato div:hover a {
   color: white !important;
   font-weight: bold;
 }
@@ -122,16 +120,13 @@ footer {
   text-shadow: #19132f 0.1em 0.1em 0.2em;
 }
 
-
 #bd {
   background-image: url('./img/background/b1.jpg');
 }
 
-
 #bd #foto {
   background-image: url('./img/perfil/soniamarasa.jpg');
 }
-
 
 #night {
   background-image: url('./img/background/11.jpg');
@@ -150,9 +145,9 @@ footer {
   background-image: url('./img/perfil/2.jpg');
 }
 
- #afternoon .principal {
+#afternoon .principal {
   background-color: rgba(0, 0, 0, 0.6);
-} 
+}
 
 #morning {
   background-image: url('./img/background/3-1.jpg');
