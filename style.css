@@ -38,8 +38,6 @@ body {
   min-height: calc(100% - 2.5em);
 }
 
-
-
 .container {
   display: flex;
   flex-direction: column;
@@ -81,7 +79,7 @@ footer {
 }
 
 .contato div {
-  border: 2px solid rgb(208,155,181);
+  border: 2px solid rgb(208, 155, 181);
   border-radius: 10px;
   padding: 8px;
   margin-top: 12px;
@@ -90,7 +88,7 @@ footer {
   flex-direction: row;
   width: 11em;
   justify-content: center;
-  background-color: rgba(32, 28,  56, 0.7);
+  background-color: rgba(32, 28, 56, 0.7);
 }
 
 .contato div i {
@@ -98,11 +96,11 @@ footer {
 }
 
 .contato div:hover {
-  background-color: rgba(208,155,181, 0.349);
+  background-color: rgba(208, 155, 181, 0.349);
   color: white !important;
 }
 
-.contato div:hover  a{
+.contato div:hover a {
   color: white !important;
   font-weight: bold;
 }
@@ -120,17 +118,6 @@ footer {
   font-size: 1.3em;
   text-align: center;
   text-shadow: #19132f 0.1em 0.1em 0.2em;
-}
-
-
-#bd {
-  background-image: url('./img/background/b1.jpg');
-  
-}
-
-
-#bd #foto {
-  background-image: url('./img/perfil/soniamarasa.jpg');
 }
 
 #bd {
@@ -172,11 +159,11 @@ footer {
 
 @media (max-width: 600px) {
   #nome {
-    font-size: 2.8em;
+    font-size: 2.8rem;
   }
 
   #nome ~ p {
-    font-size: 1.5em;
+    font-size: 1rem;
   }
 
   .row {
@@ -188,11 +175,11 @@ footer {
 
 @media (max-width: 370px) {
   #nome {
-    font-size: 2.2em;
+    font-size: 2.2rem;
   }
 
   #nome ~ p {
-    font-size: 1em;
+    font-size: 0.8rem;
   }
 
   #foto {
