@@ -4,13 +4,17 @@
 }
 
 a:link {
-  color: white;
+  color: #daceee;
   text-transform: uppercase;
   text-decoration: none;
 }
 
 a:visited {
-  color: white;
+  color: #daceee;
+}
+
+a:hover {
+  color: #342b42;
 }
 
 html,
@@ -22,21 +26,22 @@ body {
   background-size: cover;
   background-attachment: fixed;
   font-family: Abel;
-  color: white;
+  color: #d09bb5;
 }
 
 .principal {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(23, 16, 37, 0.62);
   display: flex;
   flex-direction: column;
   height: fit-content;
   min-height: calc(100% - 2.5em);
 }
 
+
+
 .container {
   display: flex;
   flex-direction: column;
-
   width: 100%;
   padding-top: 5vh;
 }
@@ -49,7 +54,7 @@ footer {
   text-align: center;
   display: flex;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(23, 16, 37, 0.9);
   justify-content: center;
   height: 2.5em;
 }
@@ -61,7 +66,7 @@ footer {
   background-position: center;
   background-size: cover;
   border-radius: 50%;
-  border: 3px solid white;
+  border: 3px solid #948da2;
   cursor: pointer;
 }
 
@@ -76,15 +81,16 @@ footer {
 }
 
 .contato div {
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid rgb(208,155,181);
   border-radius: 10px;
   padding: 8px;
   margin-top: 12px;
   font-size: 20px;
   display: flex;
   flex-direction: row;
-  width: 8em;
+  width: 11em;
   justify-content: center;
+  background-color: rgba(32, 28,  56, 0.7);
 }
 
 .contato div i {
@@ -92,12 +98,12 @@ footer {
 }
 
 .contato div:hover {
-  background-color: rgba(255, 255, 255, 0.349);
-  color: black !important;
+  background-color: rgba(208,155,181, 0.349);
+  color: white !important;
 }
 
-.contato div a:hover {
-  color: black !important;
+.contato div:hover  a{
+  color: white !important;
   font-weight: bold;
 }
 
@@ -105,13 +111,25 @@ footer {
   font-family: Pacifico;
   font-size: 4em;
   text-align: center;
+  text-shadow: #19132f 0em 0em 0.1em;
 }
 
 #nome ~ p {
-  color: rgb(192, 192, 192);
+  color: #e3dbf1;
   font-family: Abel;
   font-size: 1.3em;
   text-align: center;
+  text-shadow: #19132f 0.1em 0.1em 0.2em;
+}
+
+
+#bd {
+  background-image: url('./img/background/b1.jpg');
+}
+
+
+#bd #foto {
+  background-image: url('./img/perfil/soniamarasa.jpg');
 }
 
 
@@ -158,15 +176,6 @@ footer {
     justify-content: center;
     flex-direction: column;
   }
-
-  /* .container {
-    height: max-content;
-    padding-bottom: 10px;
-  } */
-
-  /* .principal {
-    height: 100%;
-  } */
 }
 
 @media (max-width: 370px) {
