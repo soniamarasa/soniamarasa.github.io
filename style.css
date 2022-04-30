@@ -73,7 +73,6 @@ footer {
 
 #foto:hover {
   opacity: 0.8;
-  
 }
 
 #name {
@@ -134,6 +133,13 @@ footer {
   background-image: url('./img/perfil/soniamarasa.jpg');
 }
 
+#bd {
+  background-image: url('./img/background/b1.jpg');
+}
+
+#bd #foto {
+  background-image: url('./img/perfil/soniamarasa.jpg');
+}
 
 #night {
   background-image: url('./img/background/11.jpg');
@@ -152,9 +158,9 @@ footer {
   background-image: url('./img/perfil/2.jpg');
 }
 
- #afternoon .principal {
+#afternoon .principal {
   background-color: rgba(0, 0, 0, 0.6);
-} 
+}
 
 #morning {
   background-image: url('./img/background/3-1.jpg');
