@@ -9,9 +9,18 @@ const aboutme = document.querySelector('#aboutme-menu');
 
 let menuIsOpened = false;
 
+$(document).ready(function () {
+  $('.tooltipped').tooltip();
+});
+
+$(document).ready(function () {
+  $('.materialboxed').materialbox();
+});
+
+$('.dropdown-trigger').dropdown();
+
 if (localStorage.getItem('currentTheme')) {
   body.className = localStorage.getItem('currentTheme');
-  console.log(body.className);
 } else {
   localStorage.setItem('currentTheme', 'light');
   body.className = localStorage.getItem('currentTheme');
@@ -47,39 +56,6 @@ window.addEventListener('load', () => {
       document.links[i].className = 'active';
     }
   }
-  // buttonMenu.addEventListener('click', () => {
-  //   const dropdownContent = document.createElement('ul');
-  //   dropdownContent.className = 'dropdown-links';
-
-  //   if (!menuIsOpened) {
-  //     dropdownContent.innerHTML =
-  //       '<li><a href="/home.html" aria-selected="true">INÍCIO</a></li>' +
-  //       '<li><a href="/information.html">INFORMAÇÕES</a></li>' +
-  //       '<li><a href="/contact.html">CONTATO</a></li>' +
-  //       '<li><a href="/achievements.html">CONQUISTAS</a></li>' +
-  //       '<li><a href="/projects.html">PROJETOS</a></li>';
-  //     (' <li><a href="/aboutme.html">SOBRE MIM</a></li>');
-  //     dropdownMenu.appendChild(dropdownContent);
-  //     menuIsOpened = true;
-  //   } else {
-  //     const elementrem = document.querySelector('.dropdown-links');
-  //     dropdownMenu.className = 'menuhide';
-  //     dropdownMenu.removeChild(elementrem);
-  //     menuIsOpened = false;
-  //   }
-  // });
-
-  buttonMenu.addEventListener('click', () => {
-    $('#menudropdown').slideToggle(500);
-  });
-
-  window.onresize = function () {
-    $('#menudropdown').hide();
-  };
-
-  $(document).ready(function () {
-    $('.materialboxed').materialbox();
-  });
 
   $('.carousel.carousel-slider').carousel({
     fullWidth: true,
