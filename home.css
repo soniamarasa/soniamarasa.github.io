@@ -98,7 +98,6 @@ section {
 img {
   width: inherit;
   position: relative;
-  top: -10%;
 }
 
 article {
@@ -275,11 +274,11 @@ article i {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;
-  overflow-x: scroll;
+  overflow-x: hidden;
 }
 
 .achievements img {
-  width: 136px;
+  width: 130px;
 }
 
 .skills {
@@ -405,4 +404,26 @@ a:visited {
 .api,
 .api i {
   color: var(--primary) !important;
+}
+
+.tarot-card {
+  width: inherit;
+  position: relative;
+  width: 50px;
+  /* height: 45px; */
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--secondary);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color:var(--quinary);
+  border-radius: 10px;
+  border: 2px solid #292828;
 }
