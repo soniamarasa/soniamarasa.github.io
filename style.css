@@ -27,7 +27,7 @@ body {
   background-attachment: fixed;
   font-family: Abel;
   color: #cd9653;
-  background-color: #6a657c;
+  background-color: #000000;
 }
 
 .principal {
@@ -197,8 +197,6 @@ footer {
     justify-content: center;
     flex-direction: column;
   }
-
- 
 }
 
 #rodape {
